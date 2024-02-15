@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="smc" constructor="SMCLottiePlayer" version="0.0.1" display-name-key="SMCLottiePlayer" description-key="SMCLottiePlayer description" control-type="virtual" >
+
+    <external-service-usage enabled="false">
+
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="State" display-name-key="State" description-key="The state of the player (stopped or playing)" of-type="SingleLine.Text" usage="bound" required="false" default-value="stopped"/>
+    <property name="Loop" display-name-key="Loop" description-key="Loop the animation" of-type="TwoOptions" usage="input" required="true" default-value="false"/>
+    <property name="Autoplay" display-name-key="Autoplay" description-key="Autoplay the animation" of-type="TwoOptions" usage="input" required="true" default-value="false"/>
+    <property name="Controls" display-name-key="Controls" description-key="Show controls" of-type="TwoOptions" usage="input" required="true" default-value="false"/>
+    <property name="Source" display-name-key="Source" description-key="Animation source" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="Speed" display-name-key="Speed" description-key="Spped" of-type="Whole.None" usage="input" required="true" default-value="1"/>
+    <property name="Background" display-name-key="Background" description-key="Background color" of-type="SingleLine.Text" usage="input" required="false" default-value=" "/>
+    <property name="Direction" display-name-key="Direction" description-key="Animation Direction (1 forward, -1 backwards)" of-type="Whole.None" usage="input" required="false" default-value="1"/>
+    <property name="KeepLastFrame" display-name-key="KeepLastFrame" description-key="Hold the last frame" of-type="TwoOptions" usage="input" required="true" default-value="false"/>
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.8.6" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/SMCLottiePlayer.css" order="1" />
+      <resx path="strings/SMCLottiePlayer.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+ 
+  </control>
+</manifest>
